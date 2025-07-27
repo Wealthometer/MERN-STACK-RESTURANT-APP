@@ -19,5 +19,21 @@ const reservationSchema = new mongoose.Schema({
         type : String,
         require: true,
         validate : [validator.isEmail, "Provide a valid Email"]
+    },
+    phone : {
+        type : String,
+        require : true,
+        minLenght : [11, 'Phone Number Must Only Contain Only 11 Digits ..!'],
+        maxLenght : [11, 'Phone Number Must Only Contain Only 11 Digits ..!']
+    },
+    time : {
+        type : String,
+        require : true
+    },
+    date : {
+        type : String,
+        require : true
     }
 });
+
+export const Reservation = mongoose.model("Reservation")
