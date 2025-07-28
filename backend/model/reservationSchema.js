@@ -1,4 +1,3 @@
-import { text } from 'express';
 import mongoose from 'mongoose';
 import validator from 'validator';
 
@@ -36,4 +35,4 @@ const reservationSchema = new mongoose.Schema({
     }
 });
 
-export const Reservation = mongoose.model("Reservation")
+export const Reservation = mongoose.model("Reservation", reservationSchema);
