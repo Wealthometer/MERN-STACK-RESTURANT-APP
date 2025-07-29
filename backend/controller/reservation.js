@@ -15,8 +15,11 @@ export const sendReservation = async (req, res, next) => {
             message : "Reservation Sent Succesfullly"
         })
     } catch (error) {
-        if (error) {
-            
+        if (error.name === "s" ) {
+            const ValidationErrors = Object.values(error.errors).map(
+                (err) => err.message
+            );
+             return next(new ErrorHandler(ValidationErrors.join(" , "), 400));
         }
     }
-}
+};
