@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi";
 
@@ -21,7 +20,7 @@ const About = () => {
               iusto ipsum qui dolore ex, accusantium repellat mollitia
               repellendus.
             </p>
-            <Link to={"/"}>
+            <Link to={"/menu"}>
               Explore Menu{" "}
               <span>
                 <HiOutlineArrowRight />
