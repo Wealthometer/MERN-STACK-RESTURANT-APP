@@ -23,6 +23,6 @@ app.use('/send', reservationRouter)
 
 dbConnection();
 
-app.use(errorMiddleware);
+app.use(errorMiddleware); 
 
 export default app;
