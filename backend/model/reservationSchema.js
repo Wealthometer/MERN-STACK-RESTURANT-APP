@@ -30,7 +30,7 @@ const reservationSchema = new mongoose.Schema({
         require : true
     },
     date : {
-        type : String,
+        type : String, 
         require : true
     }
 });
